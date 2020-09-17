@@ -1,5 +1,6 @@
 language: generic 
 sudo: required
+
 services:
     - docker
 
@@ -12,7 +13,7 @@ script:
 deploy:
     provider: elasticbeanstalk
     region: "eu-west-3"
-    name: "docker"
+    app: "docker"
     env: "docker-env"
     bucket_name: "elasticbeanstalk-eu-west-3-561107956813"
     bucket_path: "docker"
